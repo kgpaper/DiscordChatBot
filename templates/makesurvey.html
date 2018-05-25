@@ -2,23 +2,16 @@
 <html lang="ko">
 
 <head>
-    <script src="/static/add.js"></script>
-    <script>
+    <script type="text/javascript">
+        function add_item() {
+            var div = document.createElement('div');
+            div.innerHTML = document.getElementById('addfield').innerHTML;
+            document.getElementById('field').appendChild(div);
+        }
 
-        $(function () {
-
-            $('#list').addInputArea({
-
-                area_var: '.var_area02',
-
-                btn_add: '.add_button02',
-
-                btn_del: '.del_button02'
-
-            });
-
-        });
-
+        function remove_item(obj) {
+            document.getElementById('field').removeChild(obj.parentNode);
+        }
     </script>
 
 
@@ -57,13 +50,25 @@
                                             <li class="var_area02">
                                                 <div class="form-group form-inline">
                                                     <input id="content_0" data-id-format="content_%d" name="data[content][0]" data-name-format="data[content][%d]" class="form-control" placeholder="항목 입력" style="width: 77%;">
-                                                    <button type="button" class="del_button02 btn btn-warning">항목 제거</button>
+                                                    <input id="content_1" data-id-format="content_%d" name="data[content][1]" data-name-format="data[content][%d]" class="form-control" placeholder="항목 입력" style="width: 77%;">
+                                                    <div id="addfield" style="display:none">
+                                                        <input id="content_2" data-id-format="content_%d" name="data[content][2]" data-name-format="data[content][%d]" class="form-control" placeholder="항목 입력" style="width: 77%;">
+                                                        <button type="button" class="btn btn-warning" value="Del" onclick="remove_item(this)">항목 제거</button>
+                                                    </div>
+                                                    <div id="field"></div>
                                                 </div>
                                             </li>
                                         </ol>
                                         <div class="text-center">
-                                            <button type="button" class="add_button02 btn btn-info" value="Add">항목 추가</button>
+                                            <button type="button" class="btn btn-info" value="Add" onclick="add_item()">항목 추가</button>
                                         </div>
+                                    </div>
+                                </div>
+                                <div class="panel-footer">
+                                    <div class="form-group">
+                                        <label class="checkbox-inline">
+                                            <input type="checkbox" id="overlap" name="overlap"> 투표항목 중복 가능여부
+                                        </label>
                                     </div>
                                 </div>
                             </div>
