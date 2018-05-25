@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <script src="/static/add.js"></script>
+    <script>
+
+        $(function () {
+
+            $('#list').addInputArea({
+
+                area_var: '.var_area02',
+
+                btn_add: '.add_button02',
+
+                btn_del: '.del_button02'
+
+            });
+
+        });
+
+    </script>
+
+
+
+</head>
+
+<body>
+    {% extends "nav.html" %}
+    {% block content %}
+    <div id="page-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-9">
+                    <h1 class="page-header">투표 생성</h1>
+                    <form action="" method="post">
+                        <div class="form-group">
+                            <label>제목</label>
+                            <input class="form-control" placeholder="투표 제목" name="surveyname">
+                        </div>
+                        <div class="form-group">
+                            <label>게시자</label>
+                            <input class="form-control" placeholder="투표 게시자" name="username">
+                        </div>
+                        <div class="form-group">
+                            <label>투표정보</label>
+                            <textarea class="form-control" rows="7" placeholder="투표 정보" name="surveyinfo"></textarea>
+                        </div>
+                        <div class="col-lg-14">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    투표 항목
+                                </div>
+                                <div class="panel-body">
+                                    <div class="form-group">
+                                        <ol id="list" style="margin:0; padding:0; list-style:none;">
+                                            <li class="var_area02">
+                                                <div class="form-group form-inline">
+                                                    <input id="content_0" data-id-format="content_%d" name="data[content][0]" data-name-format="data[content][%d]" class="form-control" placeholder="항목 입력" style="width: 77%;">
+                                                    <button type="button" class="del_button02 btn btn-warning">항목 제거</button>
+                                                </div>
+                                            </li>
+                                        </ol>
+                                        <div class="text-center">
+                                            <button type="button" class="add_button02 btn btn-info" value="Add">항목 추가</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-info btn-circle btn-lg" value="Submit">
+                                <i class="fa fa-check"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+
+</html>
