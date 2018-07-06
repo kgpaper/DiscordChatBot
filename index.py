@@ -15,13 +15,13 @@ conn = pymysql.connect(
 
 cursor = conn.cursor(DictCursor)
 
-@app.route("/")
-@app.route("/home")
-@app.route("/onsurvey")
+@app.route("/", methods=['GET','POST'])
+@app.route("/home", methods=['GET','POST'])
+@app.route("/onsurvey", methods=['GET','POST'])
 def home():
     return render_template('onsurvey.html')
 
-@app.route("/endsurvey")
+@app.route("/endsurvey", methods=['GET','POST'])
 def endsurvey():
     return render_template('endsurvey.html')
 
@@ -29,10 +29,6 @@ def endsurvey():
 def makesurvey():
     error = None
     return render_template('makesurvey.html')
-
-@app.route("/tae")
-def tae():
-    return render_template('tae.html')
 
 if __name__ == "__main__":
     app.run(debug = True, port = 80)
