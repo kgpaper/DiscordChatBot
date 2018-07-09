@@ -11,23 +11,9 @@
 
     <title>WAP - 진행중인 투표</title>
 
-    <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/static/vendor/bootstrap/css/awesome-bootstrap-checkbox.css" rel="stylesheet">
-    <link href="/static/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
-    <link href="/static/dist/css/sb-admin-2.css" rel="stylesheet">
-    <link href="/static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-    <script src="/static/vendor/jquery/jquery.min.js"></script>
-    <script src="/static/vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="/static/vendor/metisMenu/metisMenu.min.js"></script>
-    <script src="/static/dist/js/sb-admin-2.js"></script>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-
 </head>
 
 <body>
-
     {% extends "nav.html" %}
     {% block content %}
     <div id="page-wrapper">
@@ -37,36 +23,37 @@
                     <h1 class="page-header">진행중인 투표</h1>
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            진행중인 투표
+                            진행중인 투표목록
                         </div>
                         <div class="panel-body">
                             <div class="panel-group" id="accordion">
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
                                         <h4 class="panel-title">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">투표 #1</a>
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">라디오버튼</a>
                                         </h4>
                                     </div>
                                     <div id="collapseOne" class="panel-collapse collapse in">
                                         <div class="panel-body">
-                                            투표입니다<br />
+                                            <br />
+                                            <div>투표항목 중복불가</div>
                                             <br />
                                             <div class="form-group">
-                                                <div class="checkbox checkbox-primary">
+                                                <div class="checkbox checkbox-info">
                                                     <input type="radio" class="styled" name="optionsRadios" id="optionsRadios1" value="option11">
                                                     <label for="optionsRadios1">
                                                         안건 #1
                                                     </label>
                                                 </div>
                                                 <br />
-                                                <div class="checkbox checkbox-primary">
+                                                <div class="checkbox checkbox-info">
                                                     <input type="radio" class="styled" name="optionsRadios" id="optionsRadios2" value="option12">
                                                     <label for="optionsRadios2">
                                                         안건 #2
                                                     </label>
                                                 </div>
                                                 <br />
-                                                <div class="checkbox checkbox-primary">
+                                                <div class="checkbox checkbox-info">
                                                     <input type="radio" class="styled" name="optionsRadios" id="optionsRadios3" value="option13">
                                                     <label for="optionsRadios3">
                                                         안건 #3
@@ -86,29 +73,30 @@
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
                                         <h4 class="panel-title">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">투표 #2</a>
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">체크박스</a>
                                         </h4>
                                     </div>
                                     <div id="collapseTwo" class="panel-collapse collapse">
                                         <div class="panel-body">
-                                            투표입니다<br />
+                                            <br />
+                                            <div>투표항목 중복가능</div>
                                             <br />
                                             <div class="form-group">
-                                                <div class="checkbox checkbox-primary">
+                                                <div class="checkbox checkbox-info">
                                                     <input type="checkbox" class="styled" name="optionCheckboxes" id="optionCheckboxes1" value="option21">
                                                     <label for="optionCheckboxes1">
                                                         안건 #1
                                                     </label>
                                                 </div>
                                                 <br />
-                                                <div class="checkbox checkbox-primary">
+                                                <div class="checkbox checkbox-info">
                                                     <input type="checkbox" class="styled" name="optionCheckboxes" id="optionCheckboxes2" value="option22">
                                                     <label for="optionCheckboxes2">
                                                         안건 #2
                                                     </label>
                                                 </div>
                                                 <br />
-                                                <div class="checkbox checkbox-primary">
+                                                <div class="checkbox checkbox-info">
                                                     <input type="checkbox" class="styled" name="optionCheckboxes" id="optionCheckboxes3" value="option23">
                                                     <label for="optionCheckboxes3">
                                                         안건 #3
@@ -132,7 +120,7 @@
             </div>
         </div>
     </div>
-        {% endblock %}
+    {% endblock %}
 
 </body>
 
