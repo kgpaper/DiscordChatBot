@@ -1,19 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for
-from flask_bootstrap import Bootstrap
-import pymysql
-from pymysql.cursors import DictCursor
 
 app = Flask(__name__)
-
-conn = pymysql.connect(
-    host='localhost',
-    user='root',
-    database='wapvote',
-    password='k@950629',
-    charset='utf8'
-)
-
-cursor = conn.cursor(DictCursor)
 
 @app.route("/", methods=['GET','POST'])
 @app.route("/home", methods=['GET','POST'])
@@ -31,4 +18,4 @@ def makesurvey():
     return render_template('makesurvey.html')
 
 if __name__ == "__main__":
-    app.run(debug = True, port = 80)
+    app.run(debug = True, port = 8080)
