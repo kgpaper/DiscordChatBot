@@ -27,7 +27,7 @@
     autoPick: false,
 
     // Enable inline mode
-    inline: false,
+    inline: true,
 
     // A element (or selector) for putting the datepicker
     container: null,
@@ -39,7 +39,7 @@
     language: 'ko-KR',
 
     // The date string format
-    format: 'mm/dd/yyyy',
+    format: 'yyyy. mm. dd',
 
     // The initial date
     date: null,
@@ -62,22 +62,17 @@
     yearFirst: false,
 
     // A string suffix to the year number.
-    yearSuffix: '',
+    yearSuffix: '년',
 
     // Days' name of the week.
-    days: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-
-    // Shorter days' name
-    daysShort: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
-
-    // Shortest days' name
-    daysMin: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
-
-    // Months' name
-    months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-
-    // Shorter months' name
-    monthsShort: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+    days: ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'],
+    daysShort: ['일', '월', '화', '수', '목', '금', '토'],
+    daysMin: ['일', '월', '화', '수', '목', '금', '토'],
+    months: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+    monthsShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+    weekStart: 1,
+    yearFirst: true,
+    yearSuffix: '년',
 
     // A element tag for each item of years, months and days
     itemTag: 'li',
@@ -108,7 +103,7 @@
 
     // Event shortcuts
     show: null,
-    hide: null,
+    hide: true,
     pick: null
   };
 
@@ -1529,4 +1524,26 @@
     };
   }
 
+}))
+
+);
+
+(function (global, factory) {
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('jquery')) :
+  typeof define === 'function' && define.amd ? define(['jquery'], factory) :
+  (factory(global.jQuery));
+}(this, (function ($) {
+  'use strict';
+
+  $.fn.datepicker.languages['ko-KR'] = {
+    format: 'yyyy. mm. dd',
+    days: ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'],
+    daysShort: ['일', '월', '화', '수', '목', '금', '토'],
+    daysMin: ['일', '월', '화', '수', '목', '금', '토'],
+    months: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+    monthsShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+    weekStart: 1,
+    yearFirst: true,
+    yearSuffix: '년'
+  };
 })));

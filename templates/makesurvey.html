@@ -16,7 +16,6 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="static/datepicker/css/datepicker.css">
-    <link rel="stylesheet" href="static/datepicker/css/main.css">
 </head>
 
 <body>
@@ -43,12 +42,11 @@
                         <div class="form-group">
                             <label>투표기한</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" data-toggle="datepicker" name="date" placeholder="날짜 입력" style="width: 70%;">
-                                <button type="button" class="btn btn-outline-secondary docs-datepicker-trigger" disabled>
+                                <input type="text" class="form-control" data-toggle="datepicker" name="date" placeholder="날짜 입력" style="width: 80%;">
+                                <button type="button" class="btn btn-outline-secondary datepicker-trigger" disabled>
                                     <i class="fa fa-calendar" aria-hidden="true"></i>
                                 </button>
                             </div>
-                            <div class="docs-datepicker-container"></div>
                         </div>
                         <div class="col-lg-14">
                             <div class="panel panel-default">
@@ -106,7 +104,7 @@
     <script src="static/datepicker/js/datepicker.js"></script>
     <script src="static/datepicker/js/datepicker.ko-KR.js"></script>
     <script src="static/datepicker/js/main.js"></script>
-    
+
     {% endblock %}
 </body>
 
