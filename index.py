@@ -17,7 +17,5 @@ def makesurvey():
     error = None
     return render_template('makesurvey.html')
 
-def makesurvey
-
 if __name__ == "__main__":
     app.run(debug = True, port = 8080)
