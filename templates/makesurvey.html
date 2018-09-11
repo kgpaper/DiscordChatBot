@@ -13,9 +13,30 @@
             document.getElementById('field').removeChild(obj.parentNode);
         }
     </script>
+    <script>
+        $(function () {
+            $('').datepicker({
+            autoHide: true,
+            language: 'ko-KR'
+            });
+        });
+      </script>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="static/datepicker/css/datepicker.css">
+    <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/vendor/bootstrap/css/awesome-bootstrap-checkbox.css" rel="stylesheet">
+    <link href="/static/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+    <link href="/static/dist/css/sb-admin-2.css" rel="stylesheet">
+    <link href="/static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="/static/vendor/jquery/jquery.min.js"></script>
+    <script src="/static/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/static/vendor/metisMenu/metisMenu.min.js"></script>
+    <script src="/static/dist/js/sb-admin-2.js"></script>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 </head>
 
 <body>
@@ -102,8 +123,10 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://fengyuanchen.github.io/js/common.js"></script>
     <script src="static/datepicker/js/datepicker.js"></script>
+    <script src="static/datepicker/js/datepicker.common.js"></script>
+    <script src="static/datepicker/js/datepicker.esm.js"></script>
     <script src="static/datepicker/js/datepicker.ko-KR.js"></script>
-    <script src="static/datepicker/js/main.js"></script>
+    <script src="static/datepicker/css/datepicker.css"></script>
 
     {% endblock %}
 </body>

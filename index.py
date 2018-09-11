@@ -18,4 +18,4 @@ def makesurvey():
     return render_template('makesurvey.html')
 
 if __name__ == "__main__":
-    app.run(debug = True, port = 8080)
+    app.run(port = 8080)
